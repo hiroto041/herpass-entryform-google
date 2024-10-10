@@ -177,7 +177,7 @@ document.getElementById('multiStepForm').addEventListener('submit', function(e) 
     .then(response => {
         console.log('Request completed');  // レスポンスはチェックできません
         alert('会員登録が完了しました');
-        window.location.href = 'https://lp.her-pass.jp/thanks-google-2';
+        window.location.href = 'https://timerex.net/s/nishikawa-taichi_6ee2/fc7e2342';
     })
     .catch(error => {
         console.error('Error:', error);
