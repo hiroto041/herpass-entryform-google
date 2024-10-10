@@ -39,10 +39,12 @@ body {
 
 .header-text-top {
     color: #176086;
+    font-weight: bold;
 }
 
 .header-text-foot {
     color: #333333;
+    font-weight: bold;
 }
 
 .highlight-text {
@@ -56,7 +58,7 @@ body {
 .main-visual {
     width: 100vw;
     aspect-ratio: 2214 / 994;
-    background-image: url('https://github.com/hiroto041/herpass-entryform-google/blob/main/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%92%E3%82%99%E3%82%B7%E3%82%99%E3%83%A5%E3%82%A2%E3%83%ABaa.png?raw=true');
+    background-image: url('img/メインビジュアルaa.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -209,6 +211,7 @@ body {
 .easy-text {
     font-size: 16px;
     margin-right: 4px;
+    font-weight: bold;
 }
 
 
@@ -256,7 +259,7 @@ form {
 
 .label-lock {
     margin-top: 8px;
-    margin-bottom: 10px;
+    margin-bottom: 14px;
 }
 
 .label-lock span {
@@ -272,7 +275,7 @@ form {
 
 .step-4-label {
     font-weight: bold;
-    font-size: 15px;
+    font-size: 16px;
     color: #333333;
     margin-bottom: 5px;
     align-self: flex-start;
@@ -447,6 +450,7 @@ input[type="text"], input[type="number"], input[type="email"], input[type="tel"]
     cursor: pointer;
     transition: background-color 0.3s;
     box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1); /* 軽いシャドウ */
+    font-weight: bold;
 }
 
 .option-button:hover {
@@ -479,6 +483,7 @@ input[type="text"], input[type="number"], input[type="email"], input[type="tel"]
     cursor: pointer;
     transition: background-color 0.3s;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 軽いシャドウ */
+    font-weight: bold;
 }
 
 .option-button-3:hover {
