@@ -92,26 +92,45 @@ function showStep(stepIndex) {
 
 
 // 次のステップに進む
+// 次のステップに進む
 function nextStep() {
     const steps = document.querySelectorAll('.step');
+
     // 現在のステップに関連する選択がされているか確認
     if (currentStep === 0 && !selectedOptions.experience) {
-        alert('選択してください: 経験年数');
+        alert('経験年数を選択してください');
         return;
     }
     if (currentStep === 1 && !selectedOptions.timing) {
-        alert('選択してください: 転職希望時期');
+        alert('転職希望時期を選択してください');
         return;
     }
     if (currentStep === 2 && !selectedOptions.salary) {
-        alert('選択してください: 現在の年収');
+        alert('現在の年収を選択してください');
         return;
     }
+    
+    // STEP4で名前と生まれ年をチェックする
+    if (currentStep === 3) {
+        const name = document.getElementById('name').value;
+        const birthYear = document.getElementById('birthYear').value;
 
+        if (!name) {
+            alert('名前を入力してください');
+            return;
+        }
+        if (!birthYear) {
+            alert('生まれ年を入力してください');
+            return;
+        }
+    }
+
+    // 次のステップがまだ存在する場合に進む
     if (currentStep < steps.length - 1) {
         showStep(currentStep + 1);  // 次のステップを表示
     }
 }
+
 
 // 前のステップに戻る
 function prevStep() {
@@ -176,7 +195,7 @@ document.getElementById('multiStepForm').addEventListener('submit', function(e) 
     })
     .then(response => {
         console.log('Request completed');  // レスポンスはチェックできません
-        alert('会員登録が完了しました');
+        alert('会員登録ありがとうございま。「閉じる」を');
         window.location.href = 'https://timerex.net/s/nishikawa-taichi_6ee2/fc7e2342';
     })
     .catch(error => {
