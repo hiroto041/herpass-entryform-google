@@ -5,6 +5,8 @@ body {
     background-color: #f5f5f5;
 }
 
+
+
 /* ヘッダーのスタイル */
 .header {
     background-color: #ffffff;
@@ -58,7 +60,7 @@ body {
 .main-visual {
     width: 100vw;
     aspect-ratio: 2214 / 994;
-    background-image: url('https://github.com/hiroto041/herpass-entryform-google/blob/main/Frame%202550.png?raw=true');
+    background-image: url('img/メインビジュアルaa.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -145,6 +147,7 @@ body {
 .progress-bar li {
     position: relative;
     text-align: center;
+    align-items: center;
     flex: 1.5;
     font-size: 16px;
     color: white;
@@ -680,4 +683,20 @@ input[type="text"], input[type="number"], input[type="email"], input[type="tel"]
 }
 
 
+/* 光るアニメーション */
+@keyframes shine {
+    0% {
+        box-shadow: 0 0 2px #F39C12;
+    }
+    50% {
+        box-shadow: 0 0 10px #F39C12, 0 0 20px #F39C12;
+    }
+    100% {
+        box-shadow: 0 0 2px #F39C12;
+    }
+}
+
+.button-glow {
+    animation: shine 1s infinite;
+}
 
