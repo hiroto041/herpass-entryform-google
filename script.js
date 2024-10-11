@@ -91,7 +91,59 @@ function showStep(stepIndex) {
 }
 
 
-// 次のステップに進む
+// 名前と生まれ年が入力されたときに次へボタンを光らせる関数
+function checkInputCompletion() {
+    const name = document.getElementById('name').value;
+    const birthYear = document.getElementById('birthYear').value;
+    const nextButton = document.querySelector('.step-4-next');
+
+    // 生まれ年が半角数字4桁かどうかを確認する正規表現
+    const birthYearIsValid = /^\d{4}$/.test(birthYear);
+
+    // 名前が空でなく、生まれ年が4桁の半角数字である場合に光らせる
+    if (name.trim() !== '' && birthYearIsValid) {
+        // 両方が記入完了したタイミングでアニメーションを追加
+        if (!nextButton.classList.contains('button-glow')) {
+            nextButton.classList.add('button-glow');
+        }
+    } else {
+        // 片方でも条件を満たさないならアニメーションを除去
+        nextButton.classList.remove('button-glow');
+    }
+}
+
+// 名前と生まれ年の入力にリアルタイムで反応するイベントリスナーを追加
+document.getElementById('name').addEventListener('input', checkInputCompletion);
+document.getElementById('birthYear').addEventListener('input', checkInputCompletion);
+
+
+// 携帯番号とメールアドレスが入力されたときに次へボタンを光らせる関数
+function checkPhoneEmailCompletion() {
+    const phone = document.getElementById('phone').value;
+    const email = document.getElementById('email').value;
+    const nextButton = document.querySelector('.step-5-con');
+
+    // 携帯番号が半角数字11桁かどうかを確認する正規表現
+    const phoneIsValid = /^\d{11}$/.test(phone);
+    
+    // メールアドレスが有効かどうかを確認する正規表現
+    const emailIsValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+
+    // 両方が記入完了したタイミングでアニメーションを追加
+    if (phoneIsValid && emailIsValid) {
+        if (!nextButton.classList.contains('button-glow')) {
+            nextButton.classList.add('button-glow');
+        }
+    } else {
+        // 片方でも条件を満たさない場合はアニメーションを除去
+        nextButton.classList.remove('button-glow');
+    }
+}
+
+// 携帯番号とメールアドレスの入力にリアルタイムで反応するイベントリスナーを追加
+document.getElementById('phone').addEventListener('input', checkPhoneEmailCompletion);
+document.getElementById('email').addEventListener('input', checkPhoneEmailCompletion);
+
 // 次のステップに進む
 function nextStep() {
     const steps = document.querySelectorAll('.step');
@@ -109,7 +161,7 @@ function nextStep() {
         alert('現在の年収を選択してください');
         return;
     }
-    
+
     // STEP4で名前と生まれ年をチェックする
     if (currentStep === 3) {
         const name = document.getElementById('name').value;
@@ -130,6 +182,8 @@ function nextStep() {
         showStep(currentStep + 1);  // 次のステップを表示
     }
 }
+
+
 
 
 // 前のステップに戻る
