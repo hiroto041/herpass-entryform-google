@@ -395,7 +395,7 @@ input[type="text"], input[type="number"], input[type="email"], input[type="tel"]
 .step-5-con {
     background-color: #F39C12;
     color: white;
-    width: 58%;
+    width: 60%;
     padding: 10px 0px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
     border: none; /* ボーダーなし */
