@@ -1,8 +1,11 @@
 body {
     font-family: "YuGothic", "Yu Gothic", "Hiragino Kaku Gothic Pro", "Helvetica Neue", Arial, sans-serif;
     padding: 0px;
-    margin: 0;
+    margin: 0 auto;
     background-color: #f5f5f5;
+    min-height: 100vh;     
+    max-width: 600px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 
@@ -11,7 +14,7 @@ body {
 .header {
     background-color: #ffffff;
     padding: 10px 20px;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
     display: flex;
     justify-content: center;
 }
@@ -21,7 +24,7 @@ body {
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    max-width: 1200px;
+    max-width: 600px;
 }
 
 .logo {
@@ -59,6 +62,7 @@ body {
 /* メインビジュアルのスタイル */
 .main-visual {
     width: 100vw;
+    max-width: 600px;
     aspect-ratio: 2214 / 994;
     background-image: url('https://github.com/hiroto041/herpass-entryform-google/blob/main/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%92%E3%82%99%E3%82%B7%E3%82%99%E3%83%A5%E3%82%A2%E3%83%ABaa.png?raw=true');
     background-size: cover;
@@ -84,6 +88,7 @@ body {
     color: white;
     background: linear-gradient(to right, #274B77, #274B77, #396A98, #396A98, #274B77);
     width: 48vw;
+    max-width: 288px;
     text-align: center;
     margin-bottom: 2vw;
     letter-spacing: 0.4vw;
@@ -94,13 +99,32 @@ body {
     margin-bottom: 0px;
     font-size: 4vw;
     width: 58vw;
+    max-width: 348px;
     color: #274B77;
     background-color: white;
     text-align: center;
     letter-spacing: 0.6vw;
 }
 
+/* 画面幅が600px以上の場合のフォントサイズ */
+@media (min-width: 600px) {
+    .main-visual-text h1 {
+        font-size: 36px; /* 横幅600px以上ではフォントサイズを24pxに固定 */
+        margin-bottom: 12px;
+        letter-spacing: 2.396px;
+    }
+
+    .main-visual-text h2 {
+        font-size: 24px; /* 横幅600px以上ではフォントサイズを24pxに固定 */
+        letter-spacing: 3.594px;
+    }
+
+
+}
+
+
 .main-visual img {
+
     width: 50%;
     padding-left: 7%;
     padding-top: 4.5%;
@@ -129,7 +153,6 @@ body {
     margin-right: -11px;
     margin-top: 2.5px;
     font-family: "Avenir", "Helvetica Neue", Arial, sans-serif;
-
 }
 
 /* プログレスバー本体 */
@@ -351,6 +374,22 @@ input[type="text"], input[type="number"], input[type="email"], input[type="tel"]
     font-weight: bold;
 }
 
+/* 画面幅が600px以上の場合のフォントサイズ */
+@media (min-width: 600px) {
+    .next-button-1 {
+        font-size: 18px;
+        margin-left: 360px;
+    }
+    .next-button {
+        font-size: 18px; /* 横幅600px以上ではフォントサイズを24pxに固定 */
+    }
+    .back-button {
+        font-size: 18px;
+    }
+}
+
+
+
 .step-4-next {
     background-color: #F39C12;
     color: white;
@@ -366,6 +405,17 @@ input[type="text"], input[type="number"], input[type="email"], input[type="tel"]
 .next4{
     font-weight: bold;
     font-size: 4vw;
+}
+
+@media (min-width: 450px) {
+    .step-4-next {
+        width: 226px;
+        height: 52px;
+    }
+
+    .next4 {
+        font-size: 18px;
+    }
 }
 
 .mark4 {
@@ -418,10 +468,31 @@ input[type="text"], input[type="number"], input[type="email"], input[type="tel"]
     letter-spacing: 0.5vw;
 }
 
+
 .sign {
     font-size: 4vw;
     font-weight: bold;
     letter-spacing: 1vw;
+}
+
+@media (min-width: 450px) {
+    .step-5-links a {
+        font-size: 10.35px;
+    }
+    .step-5-links span {
+        font-size: 9px;
+    }
+    .step-5-con {
+        width: 246px;
+    }
+    .consensus {
+        font-size: 11.25px;
+        letter-spacing: 3px;
+    }
+    .sign {
+        font-size: 18px;
+        letter-spacing: 6px;
+    }
 }
 
 .mark5 {
@@ -701,4 +772,7 @@ input[type="text"], input[type="number"], input[type="email"], input[type="tel"]
 .button-glow {
     animation: shine 1s infinite;
 }
+
+
+
 
