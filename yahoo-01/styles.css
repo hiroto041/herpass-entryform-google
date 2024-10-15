@@ -1,5 +1,5 @@
 body {
-    font-family: "YuGothic";
+    font-family: "YuGothic", "Yu Gothic", "Hiragino Kaku Gothic Pro", "Helvetica Neue", Arial, sans-serif;
     padding: 0px;
     margin: 0;
     background-color: #f5f5f5;
@@ -128,7 +128,8 @@ body {
     margin-left: 14px;
     margin-right: -11px;
     margin-top: 2.5px;
-    font-family: "Avenir";
+    font-family: "Avenir", "Helvetica Neue", Arial, sans-serif;
+
 }
 
 /* プログレスバー本体 */
@@ -152,7 +153,8 @@ body {
     font-size: 16px;
     color: white;
     counter-increment: step; /* ステップをカウント */
-    font-family: "Avenir";
+    font-family: "Avenir", "Helvetica Neue", Arial, sans-serif;
+
 }
 
 /* ステップの番号部分と間の線を `::before` で表現 */
@@ -699,3 +701,4 @@ input[type="text"], input[type="number"], input[type="email"], input[type="tel"]
 .button-glow {
     animation: shine 1s infinite;
 }
+
