@@ -248,7 +248,7 @@ document.getElementById('multiStepForm').addEventListener('submit', function(e) 
     })
     .then(response => {
         console.log('メール通知とリクエストが完了しました');  // リクエストの完了を確認
-        alert('会員登録ありがとうございます。\n続いて、「閉じる」ボタンを押し、\n無料相談をご予約ください。');
+        alert('会員登録ありがとうございます。\n続いて、「閉じる」または「閉じる」ボタンを押し、\n無料相談をご予約ください。');
         window.location.href = 'https://timerex.net/s/nishikawa-taichi_6ee2/fc7e2342';
     })
     .catch(error => {
