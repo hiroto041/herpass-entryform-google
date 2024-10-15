@@ -128,7 +128,8 @@ body {
     margin-left: 14px;
     margin-right: -11px;
     margin-top: 2.5px;
-    font-family: "Avenir";
+    font-family: "Avenir", "Helvetica Neue", Arial, sans-serif;
+
 }
 
 /* プログレスバー本体 */
@@ -152,7 +153,8 @@ body {
     font-size: 16px;
     color: white;
     counter-increment: step; /* ステップをカウント */
-    font-family: "Avenir";
+    font-family: "Avenir", "Helvetica Neue", Arial, sans-serif;
+
 }
 
 /* ステップの番号部分と間の線を `::before` で表現 */
