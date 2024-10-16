@@ -424,6 +424,14 @@ input[type="text"], input[type="number"], input[type="email"], input[type="tel"]
     position: absolute; /* 絶対配置で右寄せ */
     right: 15px; /* 右端から15pxの位置に配置 */
     top: 30%; 
+    font-size: 14px;
+}
+
+@media (min-width: 390px) {
+    .mark4 {
+        top: 27%;
+        font-size: 18px;
+    }
 }
 
 .step-5-links {
@@ -475,6 +483,14 @@ input[type="text"], input[type="number"], input[type="email"], input[type="tel"]
     letter-spacing: 1vw;
 }
 
+.mark5 {
+    font-weight: bold;
+    position: absolute; /* 絶対配置で右寄せ */
+    right: 15px; /* 右端から15pxの位置に配置 */
+    top: 32%; 
+    font-size: 16px;
+}
+
 @media (min-width: 450px) {
     .step-5-links a {
         font-size: 10.35px;
@@ -500,6 +516,14 @@ input[type="text"], input[type="number"], input[type="email"], input[type="tel"]
     position: absolute; /* 絶対配置で右寄せ */
     right: 15px; /* 右端から15pxの位置に配置 */
     top: 32%; 
+    font-size: 14px;
+}
+
+@media (min-width: 390px) {
+    .mark5 {
+        top: 30%;
+        font-size: 18px;
+    }
 }
 
 
@@ -560,6 +584,17 @@ input[type="text"], input[type="number"], input[type="email"], input[type="tel"]
     transition: background-color 0.3s;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 軽いシャドウ */
     font-weight: bold;
+}
+
+@media (min-width: 500px) {
+    .option-button-3 {
+        width: 368px;
+    }
+}
+
+.option-button-3 span {
+    font-weight: normal;
+    font-size: 16px;
 }
 
 .option-button-3:hover {
@@ -772,3 +807,6 @@ input[type="text"], input[type="number"], input[type="email"], input[type="tel"]
 .button-glow {
     animation: shine 1s infinite;
 }
+
+
+
