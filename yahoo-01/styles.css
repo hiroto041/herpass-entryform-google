@@ -22,7 +22,6 @@ body {
 .header-content {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     width: 100%;
     max-width: 600px;
 }
@@ -32,7 +31,8 @@ body {
 }
 
 .header-text {
-    text-align: right;
+    text-align: left;
+    margin-left: 14px;
 }
 
 
@@ -772,7 +772,3 @@ input[type="text"], input[type="number"], input[type="email"], input[type="tel"]
 .button-glow {
     animation: shine 1s infinite;
 }
-
-
-
-
