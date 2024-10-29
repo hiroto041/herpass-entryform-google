@@ -938,6 +938,7 @@ input[type="text"], input[type="number"], input[type="email"], input[type="tel"]
 
 .content-under {
     background-color: white;
+    border-radius: 0 0 8px 8px; 
 }
 
 .continue-button {
@@ -956,4 +957,3 @@ input[type="text"], input[type="number"], input[type="email"], input[type="tel"]
 .continue-button:hover {
     background-color: #4da874;
 }
-
