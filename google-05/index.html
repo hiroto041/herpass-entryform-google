@@ -229,6 +229,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="update">
             <span id="update-date"></span> 最新求人更新
         </div>
+        
+        <script>
+            // 今日の日付を取得
+            const today = new Date();
+            const formattedDate = (today.getMonth() + 1) + '月' + today.getDate() + '日';
+        
+            // update-date に日付を挿入
+            document.getElementById('update-date').textContent = formattedDate;
+        </script>
         <!-- プライバシーマークに関する記載を追加 -->
         <div class="privacy-mark">
             <img src="https://github.com/hiroto041/herpass-entryform-google/blob/main/10824500_02_200_JP.png?raw=true" alt="プライバシーマーク">
