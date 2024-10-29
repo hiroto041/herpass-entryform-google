@@ -209,13 +209,7 @@ function pushHistoryState() {
 }
 
 
-// 現在の日付をフォーマットして表示
-window.onload = function() {
-    const updateDate = document.getElementById('update-date');
-    const today = new Date();
-    const formattedDate =  (today.getMonth() + 1) + '月' + today.getDate() + '日';
-    updateDate.textContent = formattedDate;  // 日付を挿入
-};
+
 
 // フォーム送信処理
 document.getElementById('multiStepForm').addEventListener('submit', function(e) {
