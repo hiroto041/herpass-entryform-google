@@ -840,7 +840,7 @@ input[type="text"], input[type="number"], input[type="email"], input[type="tel"]
 .close-button {
     position: absolute;
     top: 6px;
-    right: 6px;
+    right: 2px;
     background: none;
     border: none;
     font-size: 26px;
@@ -945,8 +945,8 @@ input[type="text"], input[type="number"], input[type="email"], input[type="tel"]
 .continue-button {
     background-color: #5EBF89;
     color: white;
-    font-size: 16px;
-    padding: 10px 20px;
+    font-size: 18px;
+    padding: 14px 60px;
     margin-bottom: 20px;
     border: none;
     border-radius: 5px;
@@ -958,4 +958,3 @@ input[type="text"], input[type="number"], input[type="email"], input[type="tel"]
 .continue-button:hover {
     background-color: #4da874;
 }
-
