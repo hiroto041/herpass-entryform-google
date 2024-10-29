@@ -2,7 +2,7 @@ body {
     font-family: "YuGothic", "Yu Gothic", "Hiragino Kaku Gothic Pro", "Helvetica Neue", Arial, sans-serif;
     padding: 0px;
     margin: 0 auto;
-    background-color: #f5f5f5;
+    background-color: #F9F0EF;
     min-height: 100vh;     
     max-width: 600px; 
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -43,17 +43,17 @@ body {
 }
 
 .header-text-top {
-    color: #176086;
+    color: #BF665E;
     font-weight: bold;
 }
 
 .header-text-foot {
-    color: #333333;
+    color: #593E3C;
     font-weight: bold;
 }
 
 .highlight-text {
-    color: #d9534f; /* 赤い強調表示の部分 */
+    color: #BF665E; /* 赤い強調表示の部分 */
     font-weight: bold;
 }
 
@@ -86,7 +86,8 @@ body {
     font-size: 6vw; /* 大きなフォントサイズ */
     font-weight: bold;
     color: white;
-    background: linear-gradient(to right, #274B77, #274B77, #396A98, #396A98, #274B77);
+    background-color: #BF665E;
+    /* background: linear-gradient(to right, #274B77, #274B77, #396A98, #396A98, #274B77); */
     width: 48vw;
     max-width: 288px;
     text-align: center;
@@ -100,7 +101,7 @@ body {
     font-size: 4vw;
     width: 58vw;
     max-width: 348px;
-    color: #274B77;
+    color: #BF665E;
     background-color: white;
     text-align: center;
     letter-spacing: 0.6vw;
@@ -142,7 +143,8 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 8px 20px;
-    background: linear-gradient(to right, #274B77, #396A98, #274B77); /* 背景のグラデーション */
+    background-color: #BF665E;
+    /* background: linear-gradient(to right, #274B77, #396A98, #274B77); 背景のグラデーション */
     color: white;
 }
 
@@ -187,7 +189,7 @@ body {
     width: 25px;
     height: 25px;
     line-height: 25px;
-    background-color: #628BA4; /* 非アクティブなステップの背景色 */
+    background-color: #DFB2AE; /* 非アクティブなステップの背景色 */
     border-radius: 50%;
     top: -12px;
     left: 50%;
@@ -203,7 +205,7 @@ body {
     position: absolute;
     width: 100%;
     height: 1.5px;
-    background-color: #8AA4BF; /* 非アクティブなステップ間の線 */
+    background-color: #DFB2AE; /* 非アクティブなステップ間の線 */
     top: 50%;
     left: 50%; /* ステップ中央から始まる */
     z-index: 0;
@@ -218,7 +220,7 @@ body {
 /* アクティブなステップ */
 .progress-bar li.active::before {
     background-color: white;
-    color: #274B77;
+    color: #BF665E;
 }
 
 /* アクティブなステップの前のステップの線を白くする */
@@ -266,12 +268,13 @@ body {
 
 /* フォームのスタイル */
 form {
-    background: #EAEFF2;
+    background: #F9F0EF;
     padding: 20px 20px 40px 20px;
     /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
 }
 
 .label {
+    color: #593E3C;
     font-size: 18px;
     font-weight: bold;
     display: block;
@@ -293,7 +296,7 @@ form {
 .label-lock span {
     font-size: 12px;
     font-weight: bold;
-    color: #333333;
+    color: #593E3C;
 }
 
 .label-lock img {
@@ -304,7 +307,7 @@ form {
 .step-4-label {
     font-weight: bold;
     font-size: 16px;
-    color: #333333;
+    color: #593E3C;
     margin-bottom: 5px;
     align-self: flex-start;
     padding-left: 7%;
@@ -312,7 +315,7 @@ form {
 
 .step-4-under {
     font-size: 14px;
-    color: #2D6183;
+    color: #593E3C;
     letter-spacing: 1px;
     margin-top: 10px;
     margin-bottom: 36px;
@@ -327,16 +330,16 @@ input[type="text"], input[type="number"], input[type="email"], input[type="tel"]
     padding-left: 10px;
     margin-bottom: 20px;
     border-radius: 4px;
-    border: 2px solid #2E5A7C;
+    border: 2px solid #BF665E;
     font-size: 15px;
     box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1); 
 }
 
 
 .next-button-1 {
-    color: #2C6C8F;
+    color: #BF665E;
     border: none;
-    background-color: #EAEFF2;
+    background-color: #F9F0EF;
     text-decoration: underline;
     font-size: 3vw;
     margin-left: 60vw;
@@ -357,18 +360,18 @@ input[type="text"], input[type="number"], input[type="email"], input[type="tel"]
 }
 
 .next-button {
-    color: #2C6C8F;
+    color: #BF665E;
     border: none;
-    background-color: #EAEFF2;
+    background-color: #F9F0EF;
     text-decoration: underline;
     font-size: 3vw;
     font-weight: bold;
 }
 
 .back-button {
-    color: #2C6C8F;
+    color: #BF665E;
     border: none;
-    background-color: #EAEFF2;
+    background-color: #F9F0EF;
     text-decoration: underline;
     font-size: 3vw;
     font-weight: bold;
@@ -391,7 +394,7 @@ input[type="text"], input[type="number"], input[type="email"], input[type="tel"]
 
 
 .step-4-next {
-    background-color: #F39C12;
+    background-color: #5EBF89;
     color: white;
     width: 58%;
     height: 12vw;
@@ -453,7 +456,7 @@ input[type="text"], input[type="number"], input[type="email"], input[type="tel"]
 }
 
 .step-5-con {
-    background-color: #F39C12;
+    background-color: #5EBF89;
     color: white;
     width: 60%;
     padding: 10px 0px;
@@ -541,8 +544,8 @@ input[type="text"], input[type="number"], input[type="email"], input[type="tel"]
 .option-button {
     flex: 1 1 calc(40% - 20px); /* 45%の幅で、間に20pxの余白 */
     background-color: #ffffff;
-    color: #2E5A7C;
-    border: 2px solid #2E5A7C; /* ボーダーを少し太くして目立たせる */
+    color: #BF665E;
+    border: 2px solid #BF665E; /* ボーダーを少し太くして目立たせる */
     border-radius: 4px;
     padding: 20px;
     text-align: center;
@@ -558,9 +561,9 @@ input[type="text"], input[type="number"], input[type="email"], input[type="tel"]
 }
 
 .option-button.selected {
-    background-color: #2E5A7C;
+    background-color: #BF665E;
     color: white;
-    border-color: #2E5A7C;  /* 緑のボーダーで選択されたことを強調 */
+    border-color: #BF665E;  /* 緑のボーダーで選択されたことを強調 */
 }
 
 .options-3 {
@@ -574,8 +577,8 @@ input[type="text"], input[type="number"], input[type="email"], input[type="tel"]
 .option-button-3 {
     width: 80%;  /* ボタン幅を80%に設定 */
     background-color: #ffffff;
-    color: #2E5A7C;
-    border: 2px solid #2E5A7C; /* ボーダーを少し太くして目立たせる */
+    color: #BF665E;
+    border: 2px solid #BF665E; /* ボーダーを少し太くして目立たせる */
     border-radius: 4px;
     padding: 5px 20px;
     text-align: center;
@@ -602,9 +605,9 @@ input[type="text"], input[type="number"], input[type="email"], input[type="tel"]
 }
 
 .option-button-3.selected {
-    background-color: #2E5A7C;
+    background-color: #BF665E;
     color: white;
-    border-color: #2E5A7C;  /* 緑のボーダーで選択されたことを強調 */
+    border-color: #BF665E;  /* 緑のボーダーで選択されたことを強調 */
 }
 
 
@@ -730,7 +733,7 @@ input[type="text"], input[type="number"], input[type="email"], input[type="tel"]
 
 /* モーダルのコンテンツスタイル */
 .modal-content {
-    background-color: #f5f5f5;
+    background-color: #F9F0EF;
     padding: 20px;
     border-radius: 4px;
     text-align: center;
@@ -740,6 +743,7 @@ input[type="text"], input[type="number"], input[type="email"], input[type="tel"]
 }
 
 .modal h2 {
+    color: #593E3C;
     font-size: 20px;
     font-weight: bold;
     margin-bottom: 10px;
@@ -756,11 +760,11 @@ input[type="text"], input[type="number"], input[type="email"], input[type="tel"]
 /* モーダル内のボタンスタイル */
 .modal-button {
     background-color: white;
-    color: #2E5A7C;
+    color: #BF665E;
     font-size: 18px;
     font-weight: bold;
     padding: 15px 20px;
-    border: 2px solid #2E5A7C;
+    border: 2px solid #BF665E;
     border-radius: 4px;
     width: 80%;
     max-width: 350px;
@@ -780,7 +784,7 @@ input[type="text"], input[type="number"], input[type="email"], input[type="tel"]
 
 .modal-button-arrow {
     font-size: 16px;
-    color: #2E5A7C;
+    color: #BF665E;
 }
 
 /* モバイル対応: 横幅が600px以下の場合 */
@@ -807,5 +811,3 @@ input[type="text"], input[type="number"], input[type="email"], input[type="tel"]
 .button-glow {
     animation: shine 1s infinite;
 }
-
-
