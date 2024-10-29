@@ -209,26 +209,21 @@ function pushHistoryState() {
 }
 
 
-// 現在の日付をフォーマットして表示
-window.onload = function() {
-    const updateDate = document.getElementById('update-date');
-    const today = new Date();
-    const formattedDate =  (today.getMonth() + 1) + '月' + today.getDate() + '日';
-    updateDate.textContent = formattedDate;  // 日付を挿入
-};
 
+
+// フォーム送信処理
 document.getElementById('multiStepForm').addEventListener('submit', function(e) {
     e.preventDefault(); // デフォルトのフォーム送信を防止
 
     // フォームデータを手動で取得
     const formData = {
-        experience: selectedOptions.experience || '未入力', // 経験年数
-        timing: selectedOptions.timing || '未入力',        // 転職希望時期
-        salary: selectedOptions.salary || '未入力',        // 現在の年収
-        name: document.getElementById('name').value || '未入力',  // 名前
-        birthYear: document.getElementById('birthYear').value || '未入力',  // 生まれ年
-        phone: document.getElementById('phone').value || '未入力',  // 電話番号
-        email: document.getElementById('email').value || '未入力'   // メールアドレス
+        experience: selectedOptions.experience, // 選択された経験年数
+        timing: selectedOptions.timing,        // 転職希望時期
+        salary: selectedOptions.salary,        // 現在の年収
+        name: document.getElementById('name').value,  // 名前
+        birthYear: document.getElementById('birthYear').value,  // 生まれ年
+        phone: document.getElementById('phone').value,  // 電話番号
+        email: document.getElementById('email').value   // メールアドレス
     };
 
     // ------------　ここから下媒体ごとでコード異なる ------------　
@@ -238,7 +233,7 @@ document.getElementById('multiStepForm').addEventListener('submit', function(e) 
     const scriptURL = 'https://script.google.com/macros/s/AKfycbzr7TloD3KXj8A75T9JIvl5R6bFLGXl0Vxk6e1L_cH42T0I1ZaAbO-czFCiIV4BRmS2/exec'; // Yahoo!用
     // const scriptURL = 'https://script.google.com/macros/s/AKfycbzJlJLtPoUo-5gVHb9ZHEZ8Os9oIjt4rd7zXeJtQVpfVloEOpTC_iCd5PLCLNGQFvVo7Q/exec'; // Meta用
 
-       fetch(scriptURL, {
+    fetch(scriptURL, {
         method: 'POST',
         mode: 'no-cors',  // CORSエラーを一時的に回避
         headers: {
@@ -247,13 +242,42 @@ document.getElementById('multiStepForm').addEventListener('submit', function(e) 
         body: new URLSearchParams(formData)
     })
     .then(response => {
-        console.log('メール通知とリクエストが完了しました');  // リクエストの完了を確認
-        alert('会員登録ありがとうございます。\n続いて、「閉じる」または「閉じる」ボタンを押し、\n無料相談をご予約ください。');
+        console.log('Request completed');  // レスポンスはチェックできません
+        alert('会員登録ありがとうございます。\n続いて、「閉じる」または「OK」ボタンを押し、\n無料相談をご予約ください。');
         window.location.href = 'https://timerex.net/s/nishikawa-taichi_6ee2/fc7e2342';
     })
     .catch(error => {
         console.error('Error:', error);
         alert('エラーが発生しました');
     });
+    
+});
+
+ // ------------------------------------------------------
+
+// ページの読み込み後、ポップアップ用のイベントを設定
+window.onload = function() {
+    history.pushState(null, null, location.href);  // 戻る操作の初期設定
+};
+
+// ユーザーがブラウザのバックボタンを押したときの動作
+window.onpopstate = function(event) {
+    event.preventDefault();  // デフォルトの戻る動作を防止
+    const exitModal = document.getElementById('exitModal');
+    exitModal.style.display = 'flex';  // モーダルを表示
+};
+
+// 「×」ボタンをクリックしたとき
+document.querySelector('.close-button').addEventListener('click', function() {
+    const exitModal = document.getElementById('exitModal');
+    exitModal.style.display = 'none';  // モーダルを閉じる
+    history.pushState(null, null, location.href);  // ページの状態をリセット
+});
+
+// 「入力を続ける」ボタンをクリックしたとき
+document.querySelector('.continue-button').addEventListener('click', function() {
+    const exitModal = document.getElementById('exitModal');
+    exitModal.style.display = 'none';  // モーダルを閉じる
+    history.pushState(null, null, location.href);  // ページの状態をリセット
 });
 
