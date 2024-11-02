@@ -151,6 +151,7 @@ body {
     .main-visual-txt {
         font-size: 19px;
         padding-top: 7px;
+        letter-spacing: 1.2px;
     }
 
     .main-visual-num {
