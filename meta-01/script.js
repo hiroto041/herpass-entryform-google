@@ -217,41 +217,43 @@ document.getElementById('multiStepForm').addEventListener('submit', function(e) 
 
     // フォームデータを手動で取得
     const formData = {
-        experience: selectedOptions.experience, // 選択された経験年数
-        timing: selectedOptions.timing,        // 転職希望時期
-        salary: selectedOptions.salary,        // 現在の年収
-        name: document.getElementById('name').value,  // 名前
-        birthYear: document.getElementById('birthYear').value,  // 生まれ年
-        phone: document.getElementById('phone').value,  // 電話番号
-        email: document.getElementById('email').value   // メールアドレス
+        experience: selectedOptions.experience,
+        timing: selectedOptions.timing,
+        salary: selectedOptions.salary,
+        name: document.getElementById('name').value,
+        birthYear: document.getElementById('birthYear').value,
+        phone: document.getElementById('phone').value,
+        email: document.getElementById('email').value
     };
-
-    // ------------　ここから下媒体ごとでコード異なる ------------　
 
     // Google Apps ScriptのURL
     // const scriptURL = 'https://script.google.com/macros/s/AKfycbxy9OrbHG-p27uRcMkoVYhc9DcW87z-SOUZW_3ltnS9JecvZVTpTkpJ7mh-fOw82efPrA/exec'; // GASのウェブアプリURL
     // const scriptURL = 'https://script.google.com/macros/s/AKfycbzr7TloD3KXj8A75T9JIvl5R6bFLGXl0Vxk6e1L_cH42T0I1ZaAbO-czFCiIV4BRmS2/exec'; // Yahoo!用
     const scriptURL = 'https://script.google.com/macros/s/AKfycbzJlJLtPoUo-5gVHb9ZHEZ8Os9oIjt4rd7zXeJtQVpfVloEOpTC_iCd5PLCLNGQFvVo7Q/exec'; // Meta用
 
+    // データ送信をバックグラウンドで実行
     fetch(scriptURL, {
         method: 'POST',
-        mode: 'no-cors',  // CORSエラーを一時的に回避
+        mode: 'no-cors',
         headers: {
             'Content-Type': 'application/x-www-form-urlencoded',
         },
         body: new URLSearchParams(formData)
     })
     .then(response => {
-        console.log('Request completed');  // レスポンスはチェックできません
-        alert('会員登録ありがとうございます。\n続いて、「閉じる」または「OK」ボタンを押し、\n無料相談をご予約ください。');
-        window.location.href = 'https://timerex.net/s/nishikawa-taichi_6ee2/fc7e2342';
+        console.log('データ送信が完了しました');
     })
     .catch(error => {
-        console.error('Error:', error);
-        alert('エラーが発生しました');
+        console.error('データ送信中にエラーが発生しました:', error);
     });
-    
+
+    // データ送信と同時にリダイレクト
+    window.location.href = 'https://timerex.net/s/nishikawa-taichi_6ee2/fc7e2342';
 });
+
+
+
+
 
  // ------------------------------------------------------
 
