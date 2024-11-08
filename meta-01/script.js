@@ -282,4 +282,3 @@ document.querySelector('.continue-button').addEventListener('click', function() 
     exitModal.style.display = 'none';  // モーダルを閉じる
     history.pushState(null, null, location.href);  // ページの状態をリセット
 });
-
