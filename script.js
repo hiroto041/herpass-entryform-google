@@ -88,9 +88,11 @@ function showStep(stepIndex) {
     updateProgressBar(stepIndex);
     currentStep = stepIndex;  // 現在のステップを更新
     
-    // 画面の一番上にスクロール
+    // 画面の一番上にスクロールしてズームをリセット
     window.scrollTo(0, 0);
+    document.body.style.zoom = "100%";
 }
+
 
 
 
