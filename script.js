@@ -90,33 +90,6 @@ function showStep(stepIndex) {
     currentStep = stepIndex;  // 現在のステップを更新
 }
 
-// function showStep(stepIndex) {
-//     const steps = document.querySelectorAll('.step');
-//     const mainVisual = document.querySelector('.main-visual'); 
-//     steps.forEach((step, index) => {
-//         step.style.display = (index === stepIndex) ? 'block' : 'none';
-//     });
-
-//     // 各ステップに戻った時に選択内容をハイライト
-//     if (stepIndex === 0) highlightSelectedOption('experience');
-//     if (stepIndex === 1) highlightSelectedOption('timing');
-//     if (stepIndex === 2) highlightSelectedOption('salary');
-
-//     // STEP2, 3, 4, 5の時のみメインビジュアルを非表示
-//     if (stepIndex >= 1 && stepIndex <= 4) {
-//         mainVisual.style.display = 'none';  // メインビジュアルを非表示
-//     } else {
-//         mainVisual.style.display = 'block';  // それ以外のステップでは表示
-//     }
-
-//     updateProgressBar(stepIndex);
-//     currentStep = stepIndex;  // 現在のステップを更新
-    
-//     // 画面の一番上にスクロール
-//     window.scrollTo(0, 0);
-// }
-
-
 
 // 名前と生まれ年が入力されたときに次へボタンを光らせる関数
 function checkInputCompletion() {
@@ -288,24 +261,3 @@ document.getElementById('multiStepForm').addEventListener('submit', function(e) 
 window.onload = function() {
     history.pushState(null, null, location.href);  // 戻る操作の初期設定
 };
-
-// // ユーザーがブラウザのバックボタンを押したときの動作
-// window.onpopstate = function(event) {
-//     event.preventDefault();  // デフォルトの戻る動作を防止
-//     const exitModal = document.getElementById('exitModal');
-//     exitModal.style.display = 'flex';  // モーダルを表示
-// };
-
-// // 「×」ボタンをクリックしたとき
-// document.querySelector('.close-button').addEventListener('click', function() {
-//     const exitModal = document.getElementById('exitModal');
-//     exitModal.style.display = 'none';  // モーダルを閉じる
-//     history.pushState(null, null, location.href);  // ページの状態をリセット
-// });
-
-// // 「入力を続ける」ボタンをクリックしたとき
-// document.querySelector('.continue-button').addEventListener('click', function() {
-//     const exitModal = document.getElementById('exitModal');
-//     exitModal.style.display = 'none';  // モーダルを閉じる
-//     history.pushState(null, null, location.href);  // ページの状態をリセット
-// });
