@@ -73,7 +73,6 @@ function showStep(stepIndex) {
         step.style.display = (index === stepIndex) ? 'block' : 'none';
     });
 
-
     // 各ステップに戻った時に選択内容をハイライト
     if (stepIndex === 0) highlightSelectedOption('experience');
     if (stepIndex === 1) highlightSelectedOption('timing');
@@ -88,7 +87,11 @@ function showStep(stepIndex) {
 
     updateProgressBar(stepIndex);
     currentStep = stepIndex;  // 現在のステップを更新
+    
+    // 画面の一番上にスクロール
+    window.scrollTo(0, 0);
 }
+
 
 
 // 名前と生まれ年が入力されたときに次へボタンを光らせる関数
