@@ -88,6 +88,9 @@ function showStep(stepIndex) {
 
     updateProgressBar(stepIndex);
     currentStep = stepIndex;  // 現在のステップを更新
+
+    window.scrollTo(0, 0);
+    document.body.style.zoom = "100%";
 }
 
 
@@ -234,7 +237,7 @@ document.getElementById('multiStepForm').addEventListener('submit', function(e) 
     // データ送信をバックグラウンドで実行
     fetch(scriptURL, {
         method: 'POST',
-        mode: 'no-cors',
+        // mode: 'no-cors',
         headers: {
             'Content-Type': 'application/x-www-form-urlencoded',
         },
