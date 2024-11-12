@@ -91,6 +91,7 @@ function showStep(stepIndex) {
 }
 
 
+
 // 名前と生まれ年が入力されたときに次へボタンを光らせる関数
 function checkInputCompletion() {
     const name = document.getElementById('name').value;
@@ -213,7 +214,7 @@ function pushHistoryState() {
 
 // フォーム送信処理
 document.getElementById('multiStepForm').addEventListener('submit', function(e) {
-    e.preventDefault(); // デフォルトのフォーム送信を防止
+    // e.preventDefault(); // デフォルトのフォーム送信を防止
 
     // フォームデータを手動で取得
     const formData = {
@@ -252,12 +253,8 @@ document.getElementById('multiStepForm').addEventListener('submit', function(e) 
 });
 
 
-
-
-
- // ------------------------------------------------------
-
 // ページの読み込み後、ポップアップ用のイベントを設定
 window.onload = function() {
     history.pushState(null, null, location.href);  // 戻る操作の初期設定
 };
+
