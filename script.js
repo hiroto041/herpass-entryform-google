@@ -256,3 +256,5 @@ window.onload = function() {
     history.pushState(null, null, location.href);  // 戻る操作の初期設定
 };
 
+
+
