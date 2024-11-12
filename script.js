@@ -88,9 +88,6 @@ function showStep(stepIndex) {
 
     updateProgressBar(stepIndex);
     currentStep = stepIndex;  // 現在のステップを更新
-
-    window.scrollTo(0, 0);
-    document.body.style.zoom = "100%";
 }
 
 
