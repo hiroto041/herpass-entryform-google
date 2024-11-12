@@ -73,6 +73,7 @@ function showStep(stepIndex) {
         step.style.display = (index === stepIndex) ? 'block' : 'none';
     });
 
+
     // 各ステップに戻った時に選択内容をハイライト
     if (stepIndex === 0) highlightSelectedOption('experience');
     if (stepIndex === 1) highlightSelectedOption('timing');
@@ -87,11 +88,33 @@ function showStep(stepIndex) {
 
     updateProgressBar(stepIndex);
     currentStep = stepIndex;  // 現在のステップを更新
-    
-    // 画面の一番上にスクロールしてズームをリセット
-    window.scrollTo(0, 0);
 }
 
+// function showStep(stepIndex) {
+//     const steps = document.querySelectorAll('.step');
+//     const mainVisual = document.querySelector('.main-visual'); 
+//     steps.forEach((step, index) => {
+//         step.style.display = (index === stepIndex) ? 'block' : 'none';
+//     });
+
+//     // 各ステップに戻った時に選択内容をハイライト
+//     if (stepIndex === 0) highlightSelectedOption('experience');
+//     if (stepIndex === 1) highlightSelectedOption('timing');
+//     if (stepIndex === 2) highlightSelectedOption('salary');
+
+//     // STEP2, 3, 4, 5の時のみメインビジュアルを非表示
+//     if (stepIndex >= 1 && stepIndex <= 4) {
+//         mainVisual.style.display = 'none';  // メインビジュアルを非表示
+//     } else {
+//         mainVisual.style.display = 'block';  // それ以外のステップでは表示
+//     }
+
+//     updateProgressBar(stepIndex);
+//     currentStep = stepIndex;  // 現在のステップを更新
+    
+//     // 画面の一番上にスクロール
+//     window.scrollTo(0, 0);
+// }
 
 
 
