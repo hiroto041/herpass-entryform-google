@@ -91,7 +91,6 @@ function showStep(stepIndex) {
 }
 
 
-
 // 名前と生まれ年が入力されたときに次へボタンを光らせる関数
 function checkInputCompletion() {
     const name = document.getElementById('name').value;
@@ -253,8 +252,34 @@ document.getElementById('multiStepForm').addEventListener('submit', function(e) 
 });
 
 
+
+
+
+ // ------------------------------------------------------
+
 // ページの読み込み後、ポップアップ用のイベントを設定
 window.onload = function() {
     history.pushState(null, null, location.href);  // 戻る操作の初期設定
 };
+
+// ユーザーがブラウザのバックボタンを押したときの動作
+window.onpopstate = function(event) {
+    event.preventDefault();  // デフォルトの戻る動作を防止
+    const exitModal = document.getElementById('exitModal');
+    exitModal.style.display = 'flex';  // モーダルを表示
+};
+
+// 「×」ボタンをクリックしたとき
+document.querySelector('.close-button').addEventListener('click', function() {
+    const exitModal = document.getElementById('exitModal');
+    exitModal.style.display = 'none';  // モーダルを閉じる
+    history.pushState(null, null, location.href);  // ページの状態をリセット
+});
+
+// 「入力を続ける」ボタンをクリックしたとき
+document.querySelector('.continue-button').addEventListener('click', function() {
+    const exitModal = document.getElementById('exitModal');
+    exitModal.style.display = 'none';  // モーダルを閉じる
+    history.pushState(null, null, location.href);  // ページの状態をリセット
+});
 
