@@ -214,7 +214,7 @@ function pushHistoryState() {
 
 // フォーム送信処理
 document.getElementById('multiStepForm').addEventListener('submit', function(e) {
-    // e.preventDefault(); // デフォルトのフォーム送信を防止
+    e.preventDefault(); // デフォルトのフォーム送信を防止
 
     // フォームデータを手動で取得
     const formData = {
