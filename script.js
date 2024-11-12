@@ -88,10 +88,8 @@ function showStep(stepIndex) {
 
     updateProgressBar(stepIndex);
     currentStep = stepIndex;  // 現在のステップを更新
-
-    window.scrollTo(0, 0);
-    document.body.style.zoom = "100%";
 }
+
 
 
 // 名前と生まれ年が入力されたときに次へボタンを光らせる関数
@@ -237,7 +235,6 @@ document.getElementById('multiStepForm').addEventListener('submit', function(e) 
     // データ送信をバックグラウンドで実行
     fetch(scriptURL, {
         method: 'POST',
-        // mode: 'no-cors',
         headers: {
             'Content-Type': 'application/x-www-form-urlencoded',
         },
@@ -245,44 +242,17 @@ document.getElementById('multiStepForm').addEventListener('submit', function(e) 
     })
     .then(response => {
         console.log('データ送信が完了しました');
+        window.location.href = 'https://timerex.net/s/nishikawa-taichi_6ee2/fc7e2342';
     })
     .catch(error => {
         console.error('データ送信中にエラーが発生しました:', error);
     });
-
-    // データ送信と同時にリダイレクト
-    window.location.href = 'https://timerex.net/s/nishikawa-taichi_6ee2/fc7e2342';
+    
 });
 
-
-
-
-
- // ------------------------------------------------------
 
 // ページの読み込み後、ポップアップ用のイベントを設定
 window.onload = function() {
     history.pushState(null, null, location.href);  // 戻る操作の初期設定
 };
-
-// ユーザーがブラウザのバックボタンを押したときの動作
-window.onpopstate = function(event) {
-    event.preventDefault();  // デフォルトの戻る動作を防止
-    const exitModal = document.getElementById('exitModal');
-    exitModal.style.display = 'flex';  // モーダルを表示
-};
-
-// 「×」ボタンをクリックしたとき
-document.querySelector('.close-button').addEventListener('click', function() {
-    const exitModal = document.getElementById('exitModal');
-    exitModal.style.display = 'none';  // モーダルを閉じる
-    history.pushState(null, null, location.href);  // ページの状態をリセット
-});
-
-// 「入力を続ける」ボタンをクリックしたとき
-document.querySelector('.continue-button').addEventListener('click', function() {
-    const exitModal = document.getElementById('exitModal');
-    exitModal.style.display = 'none';  // モーダルを閉じる
-    history.pushState(null, null, location.href);  // ページの状態をリセット
-});
 
