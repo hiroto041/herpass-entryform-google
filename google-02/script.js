@@ -231,7 +231,7 @@ document.getElementById('multiStepForm').addEventListener('submit', function(e) 
     };
 
     // Google Apps ScriptのURL
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbxy9OrbHG-p27uRcMkoVYhc9DcW87z-SOUZW_3ltnS9JecvZVTpTkpJ7mh-fOw82efPrA/exec'; // GASのウェブアプリURL
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxsfbkW3SwsHQdrK5PgSf-vriExc5GJf-i9cSTm_QsrVf7CH9iZM13zxZ7cR6vg-ZVBbw/exec'; // GASのウェブアプリURL
     // const scriptURL = 'https://script.google.com/macros/s/AKfycbzr7TloD3KXj8A75T9JIvl5R6bFLGXl0Vxk6e1L_cH42T0I1ZaAbO-czFCiIV4BRmS2/exec'; // Yahoo!用
     // const scriptURL = 'https://script.google.com/macros/s/AKfycbzJlJLtPoUo-5gVHb9ZHEZ8Os9oIjt4rd7zXeJtQVpfVloEOpTC_iCd5PLCLNGQFvVo7Q/exec'; // Meta用
 
