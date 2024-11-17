@@ -184,6 +184,7 @@ function nextStep() {
     // 次のステップがまだ存在する場合に進む
     if (currentStep < steps.length - 1) {
         showStep(currentStep + 1);  // 次のステップを表示
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 }
 
@@ -231,6 +232,8 @@ document.getElementById('multiStepForm').addEventListener('submit', function (e)
     document.querySelectorAll('.step').forEach(step => (step.style.display = 'none'));
     document.querySelector('.update').style.display = 'none';
     document.getElementById('thanks-page').style.display = 'block';
+
+    window.scrollTo({ top: 0, behavior: 'smooth' });
 
     // フォームデータをバックグラウンドで送信
     const formData = {
