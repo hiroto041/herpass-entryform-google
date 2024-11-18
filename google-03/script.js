@@ -184,6 +184,7 @@ function nextStep() {
     // 次のステップがまだ存在する場合に進む
     if (currentStep < steps.length - 1) {
         showStep(currentStep + 1);  // 次のステップを表示
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 }
 
@@ -216,45 +217,52 @@ function pushHistoryState() {
 
 
 // フォーム送信処理
-document.getElementById('multiStepForm').addEventListener('submit', function(e) {
+document.getElementById('multiStepForm').addEventListener('submit', function (e) {
     e.preventDefault(); // デフォルトのフォーム送信を防止
 
-    // フォームデータを手動で取得
+    // フォームで入力された名前を取得
+    const name = document.getElementById('name').value;
+
+    // サンクスページに名前を反映
+    const userNameElement = document.getElementById('user-name');
+    userNameElement.textContent = `${name} 様`;
+
+    // UIの変更（サンクスページを表示）
+    document.querySelector('.progress-bar-container').style.display = 'none';
+    document.querySelectorAll('.step').forEach(step => (step.style.display = 'none'));
+    document.querySelector('.update').style.display = 'none';
+    document.getElementById('thanks-page').style.display = 'block';
+
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+
+    // フォームデータをバックグラウンドで送信
     const formData = {
         experience: selectedOptions.experience,
         timing: selectedOptions.timing,
         salary: selectedOptions.salary,
-        name: document.getElementById('name').value,
+        name: name,
         birthYear: document.getElementById('birthYear').value,
         phone: document.getElementById('phone').value,
         email: document.getElementById('email').value
     };
 
-    // Google Apps ScriptのURL
-    // const scriptURL = 'https://script.google.com/macros/s/AKfycbxsfbkW3SwsHQdrK5PgSf-vriExc5GJf-i9cSTm_QsrVf7CH9iZM13zxZ7cR6vg-ZVBbw/exec'; // GASのウェブアプリURL
-    // const scriptURL = 'https://script.google.com/macros/s/AKfycbzlbMCGWwJMI6T7Gnhdzdzo8nVkViUBsmv4nhQqMR0-JXRnFuD0RbOUiZx7SqaxYXlEMw/exec';
     const scriptURL = 'https://script.google.com/macros/s/AKfycbwU6NoWFi2KbokeCCrLsbmR5r9U9e6u5dLIzNWD3Xc4W2JN-nUAuxrdHNIMop-7MvzMww/exec';
-
-    // const scriptURL = 'https://script.google.com/macros/s/AKfycbzr7TloD3KXj8A75T9JIvl5R6bFLGXl0Vxk6e1L_cH42T0I1ZaAbO-czFCiIV4BRmS2/exec'; // Yahoo!用
-    // const scriptURL = 'https://script.google.com/macros/s/AKfycbzJlJLtPoUo-5gVHb9ZHEZ8Os9oIjt4rd7zXeJtQVpfVloEOpTC_iCd5PLCLNGQFvVo7Q/exec'; // Meta用
-
-    // データ送信をバックグラウンドで実行
     fetch(scriptURL, {
         method: 'POST',
-        headers: {
-            'Content-Type': 'application/x-www-form-urlencoded',
-        },
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: new URLSearchParams(formData)
     })
-    .then(response => {
-        console.log('データ送信が完了しました');
-        window.location.href = 'https://timerex.net/s/nishikawa-taichi_6ee2/fc7e2342';
-    })
-    .catch(error => {
-        console.error('データ送信中にエラーが発生しました:', error);
-    });
-    
+        .then(() => {
+            console.log('データ送信が完了しました');
+        })
+        .catch(error => {
+            console.error('データ送信中にエラーが発生しました:', error);
+        });
 });
+
+
+
+
 
 
 // ページの読み込み後、ポップアップ用のイベントを設定
