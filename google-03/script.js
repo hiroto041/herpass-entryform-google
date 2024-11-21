@@ -232,7 +232,7 @@ document.getElementById('multiStepForm').addEventListener('submit', function (e)
     document.querySelectorAll('.step').forEach(step => (step.style.display = 'none'));
     document.querySelector('.update').style.display = 'none';
     document.getElementById('thanks-page').style.display = 'block';
-
+    document.querySelector('.header-text-foot').style.display = 'none';
     window.scrollTo({ top: 0, behavior: 'smooth' });
 
     // フォームデータをバックグラウンドで送信
