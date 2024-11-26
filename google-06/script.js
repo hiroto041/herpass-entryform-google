@@ -247,7 +247,7 @@ document.getElementById('multiStepForm').addEventListener('submit', function (e)
         email: document.getElementById('email').value
     };
 
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbwU6NoWFi2KbokeCCrLsbmR5r9U9e6u5dLIzNWD3Xc4W2JN-nUAuxrdHNIMop-7MvzMww/exec';
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbw86jejxf7NMrnm8sbQMJZFj3b7Zu8s3zxoFiLtUb5QkB5pYyt9jUCLZy19mMb-emdg/exec';
     fetch(scriptURL, {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
