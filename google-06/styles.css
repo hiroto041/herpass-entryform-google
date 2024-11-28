@@ -1035,3 +1035,50 @@ input[type="text"], input[type="number"], input[type="email"], input[type="tel"]
 .thanks-link {
     height: 100px;
 }
+
+.button-container-2 {
+    display: flex; /* 子要素をフレックスボックスとして扱う */
+    justify-content: center; /* 水平方向に中央揃え */
+    align-items: center; /* 垂直方向に中央揃え */
+    margin: 0; /* 上下の余白 */
+    padding: 6px 6px;
+    height: auto; /* コンテナの高さを自動調整 */
+    background-color: white;
+}
+
+.custom-button-2 {
+    display: inline-block;
+    width: 80%; /* ボタン幅を画面幅の80%に設定 */
+    background-color: #f0a500;
+    color: white;
+    text-decoration: none;
+    font-size: 4.5vw; /* 画面幅に応じた文字サイズ (viewport widthの3%) */
+    font-weight: bold;
+    padding: 12px 24px;
+    border-radius: 8px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2), 0 2px 4px rgba(0, 0, 0, 0.15); /* 影を追加 */
+    text-align: center; /* テキストを中央揃え */
+    transition: transform 0.2s, box-shadow 0.2s; /* ホバー時のアニメーション */
+}
+
+.custom-button-2:hover {
+    background-color: #d98800;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3), 0 4px 6px rgba(0, 0, 0, 0.2); /* ホバー時の影を強調 */
+    transform: translateY(-2px); /* ホバー時の浮き上がり効果 */
+}
+
+@media (min-width: 768px) {
+    .custom-button-2 {
+        font-size: 18px; /* タブレット以上の画面では固定文字サイズ */
+    }
+}
+
+@media (min-width: 1024px) {
+    .custom-button-2 {
+        font-size: 24px; /* デスクトップ以上の画面ではさらに大きな文字サイズ */
+    }
+}
+
+
+
+
